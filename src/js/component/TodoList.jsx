@@ -34,11 +34,16 @@ const TodoList = () => {
                 <ul>
                     {
                     tareas.map( (task, index) => (
-                        <li key={index} className="task-item">• {task} 
-                            <button className="delete-btn"
-                            onClick={() => 
-                            deleteTarea(index)}>x
-                            </button>
+                        <li key={index} className="task-item">
+                            <div>
+                                • {task}
+                            </div>
+                            <div>
+                                <button className="delete-btn"
+                                    onClick={() =>
+                                        deleteTarea(index)}>x
+                                </button>
+                            </div>
                         </li>
                         ))
                     }
